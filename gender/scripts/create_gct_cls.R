@@ -1,4 +1,4 @@
-rm(list = ls()) # R version 4.1.2
+rm(list = ls()) # R version 4.0.3
 library(dplyr) # dplyr_1.0.7
 library(stringr) # stringr_1.4.0
 
