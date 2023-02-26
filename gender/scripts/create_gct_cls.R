@@ -24,7 +24,7 @@ output.cls <- function(metacolumn, filename) {
 }
 
 # --- Data ---
-# Normalized expression counts (DESeq2 output)
+# Normalized expression counts
 normcounts <- read.table("input/normalizedcounts.tsv", header = TRUE, 
                          row.names = 1)
 
