@@ -13,7 +13,7 @@ cd gsea/
 mamba env create -f envs/gsea.yaml
 ```
 
-4. Activate the enviroment:
+4. Activate the environment:
 ```
 conda activate ISCIII_GSEA
 ```
