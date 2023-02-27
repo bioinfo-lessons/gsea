@@ -1,25 +1,25 @@
 ## GSEA exercises as part of the Transcriptomics Module (2022-2023).
 ### Conda environment installation (for exercises in R)
 1. Clone this repository:
-```
+```bash
 git clone https://github.com/bioinfo-lessons/gsea
 ```
 2. Go to gsea folder:
-```
+```bash
 cd gsea/
 ```
 3. Install a new conda environment using the provided YAML:
-```
+```bash
 mamba env create -f envs/gsea.yaml
 ```
 
-4. Activate the enviroment:
-```
+4. Activate the environment:
+```bash
 conda activate ISCIII_GSEA
 ```
 
 5. Deactivate when finished:
-```
+```bash
 conda deactivate
 ```
 
@@ -33,12 +33,12 @@ conda deactivate
 ### GSEA server launch
 1. Go to GSEA folder:
 
-```
+```bash
 cd ~/GSEA_Linux_4.3.2/
 ```
 
 2. Run the following command (java >= 11 required):
 
-```
+```bash
 java --module-path=modules -Xmx4g @gsea.args --patch-module=jide.common=lib/jide-components-3.7.4.jar:lib/jide-dock-3.7.4.jar:lib/jide-grids-3.7.4.jar --module=org.gsea_msigdb.gsea/xapps.gsea.GSEA
 ```
