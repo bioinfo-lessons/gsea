@@ -10,7 +10,7 @@ cd gsea/
 ```
 3. Install a new conda environment using the provided YAML:
 ```
-conda env create -f gsea.yaml
+mamba env create -f gsea.yaml
 ```
 
 4. Activate the enviroment:
