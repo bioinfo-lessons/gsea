@@ -1,0 +1,11 @@
+*.Rproj
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+gender.cls
+gender.gct
+airway.rnk
+*.Gsea.*
+*.GseaPreranked.*

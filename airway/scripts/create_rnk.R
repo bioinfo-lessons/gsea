@@ -1,19 +1,7 @@
 rm(list = ls()) # R version 4.0.3
-library(stringr) # stringr_1.4.0
+library(tidyverse) # stringr_1.4.0
 library(DESeq2) # DESeq2_1.30.1
 library(dplyr) # dplyr_1.0.7
-
-# --- Functions ---
-output.gmt <- function(l, filename) {
-  if(file.exists(filename)) {
-    warning(paste("Removing previous", filename, "file."))
-    file.remove(filename)
-  }
-  invisible(lapply(1:length(l), function(i) {
-    cat(c(names(l)[i], "na", l[[i]], "\n"), sep = "\t", file = filename,
-        append = TRUE)
-  }))
-}
 
 # --- Data ---
 dds <- readRDS("input/dds.rds")
@@ -61,16 +49,3 @@ head(rnk)
 # Save .rnk (without header and tab separated)
 write.table(rnk, file = "airway.rnk", sep = "\t", quote = FALSE, 
             col.names = FALSE, row.names = FALSE)
-
-# How to create a gmt with my DEA results? Pick the top/bottom 100 (or 150, 
-# 200,...) ordered by LFC (independently of the p-value)
-up100 <- rnk %>% arrange(desc(LFC))
-head(up100)
-up100 <- up100$Feature[1:100]
-
-down100 <- rnk %>% arrange(LFC)
-head(down100)
-down100 <- down100$Feature[1:100]
-
-geneset <- list(up_airway = up100, down_airway = down100)
-output.gmt(geneset, filename = "airway.gmt")
