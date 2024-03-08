@@ -1,4 +1,4 @@
-## GSEA exercises as part of the Transcriptomics Module (2022-2023).
+## GSEA exercises as part of the Transcriptomics Module (2023-2024).
 ### Conda environment installation (for exercises in R)
 1. Clone this repository:
 ```bash
@@ -24,7 +24,7 @@ conda deactivate
 ```
 
 ### GSEA installation (Linux)
-1. Go to GSEA official [webpage](http://www.gsea-msigdb.org/gsea/downloads.jsp). Click on download GSEA_Linux_4.3.2.zip.
+1. Go to GSEA official [webpage](http://www.gsea-msigdb.org/gsea/downloads.jsp). Click on download GSEA_Linux_4.3.3.zip.
 
 2. Save GSEA folder whenever you want (e.g. your home directory: `~/`). 
 
@@ -33,8 +33,8 @@ conda deactivate
 ### GSEA server launch
 1. Go to GSEA folder:
 
-```bash
-cd ~/GSEA_Linux_4.3.2/
+```
+cd ~/GSEA_Linux_4.3.3/
 ```
 
 2. Run the following command (java >= 11 required):

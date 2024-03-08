@@ -1,7 +1,9 @@
 name: ISCIII_GSEA
 channels:
+  - bu_cnio
   - conda-forge
   - bioconda
+  - r
 dependencies:
   - r-base
   - r-tidyverse
@@ -9,4 +11,5 @@ dependencies:
   - openssl
   - bioconductor-deseq2
   - bioconductor-apeglm
-prefix: /Users/mjjimenez/mambaforge/envs/ISCIII_GSEA
+  - rstudio-desktop
+prefix: /Users/mjjimenez/miniconda3/envs/ISCIII_GSEA

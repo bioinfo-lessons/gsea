@@ -1,6 +1,6 @@
-rm(list = ls()) # R version 4.2.2 
+rm(list = ls()) # R version 4.3.1 (2023-06-16)
 library(tidyverse) # tidyverse_2.0.0
-library(DESeq2) # DESeq2_1.38.0
+library(DESeq2) # DESeq2_1.42.0
 
 # --- Data ---
 dds <- readRDS("input/dds.rds")

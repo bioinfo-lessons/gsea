@@ -1,4 +1,4 @@
-rm(list = ls()) # R version 4.2.2 (2022-10-31)
+rm(list = ls()) # R version 4.3.1 (2023-06-16)
 library(tidyverse) # tidyverse_2.0.0
 
 # --- Functions ---
@@ -7,10 +7,10 @@ output.gct <- function(ncounts, filename) {
   NAME <- Description <- rownames(ncounts)
   out <- cbind(NAME, Description, ncounts)
   cat(c("#1.2", "\n"), sep = "\t", file = filename)
-  cat(c(nrow(ncounts), ncol(ncounts), "\n"), sep = "\t", file = filename, 
+  cat(c(nrow(ncounts), ncol(ncounts), "\n"), sep = "\t", file = filename,
       append = TRUE)
   suppressWarnings(
-    write.table(out, file = filename, row.names = FALSE, quote = FALSE, 
+    write.table(out, file = filename, row.names = FALSE, quote = FALSE,
                 sep = "\t", na = "", append = TRUE))
 }
 
@@ -25,7 +25,7 @@ output.cls <- function(metacolumn, filename) {
 
 # --- Data ---
 # Normalized expression counts
-normcounts <- read.table("input/normalizedcounts.tsv", header = TRUE, 
+normcounts <- read.table("input/normalizedcounts.tsv", header = TRUE,
                          row.names = 1)
 
 # --- Code ---
