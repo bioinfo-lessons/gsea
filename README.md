@@ -1,4 +1,4 @@
-## GSEA exercises as part of the Transcriptomics Module (2023-2024).
+## GSEA exercises as part of the Transcriptomics Module (2025-2026).
 ### Conda environment installation (for exercises in R)
 1. Clone this repository:
 ```bash
@@ -40,5 +40,5 @@ cd ~/GSEA_Linux_4.3.3/
 2. Run the following command (java >= 11 required):
 
 ```bash
-java --module-path=modules -Xmx4g @gsea.args --patch-module=jide.common=lib/jide-components-3.7.4.jar:lib/jide-dock-3.7.4.jar:lib/jide-grids-3.7.4.jar --module=org.gsea_msigdb.gsea/xapps.gsea.GSEA
+java --module-path=modules -Xmx4g @gsea.args --patch-module=jide.common=lib/jide-components-4.4.0.jar:lib/jide-dock-4.4.0.jar:lib/jide-grids-4.4.0.jar --module=org.gsea_msigdb.gsea/xapps.gsea.GSEA
 ```
