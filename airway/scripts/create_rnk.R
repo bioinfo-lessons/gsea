@@ -19,6 +19,7 @@ res <- results(dds, alpha = 0.05, contrast = c("dex", "trt", "untrt"))
 summary(res)
 res
 
+#If you decide use LFC
 # Shrunken LFC: Necessary for ranking!!! Also useful to compare LFC across 
 # experiments. It is recommended to use these shrunken results when doing DEA.
 # Please note that the p-values might vary a little.
@@ -40,7 +41,7 @@ plotMA(res, ylim = c(-3, 3))
 plotMA(res.ape, ylim = c(-3, 3))
 
 # Create .rnk
-rnk <- data.frame(Feature = rownames(res.ape), LFC = res.ape$log2FoldChange)
+rnk <- data.frame(Feature = rownames(res), Stat = res$stat)
 head(rnk)
 rnk$Feature <- str_remove(rnk$Feature, "\\..*$")
 head(rnk)
